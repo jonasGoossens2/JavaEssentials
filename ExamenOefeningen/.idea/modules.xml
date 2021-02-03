@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Eenvoudige Klassen/Eenvoudige Klassen.iml" filepath="$PROJECT_DIR$/Eenvoudige Klassen/Eenvoudige Klassen.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ExamenOefeningen.iml" filepath="$PROJECT_DIR$/.idea/ExamenOefeningen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Overerving/Overerving.iml" filepath="$PROJECT_DIR$/Overerving/Overerving.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unittesten and Debugging/Unittesten and Debugging.iml" filepath="$PROJECT_DIR$/Unittesten and Debugging/Unittesten and Debugging.iml" />
     </modules>
   </component>
