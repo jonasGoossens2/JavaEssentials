@@ -12,9 +12,7 @@ public class TreinReis  extends Reis{
     }
 
     public TreinReis(String bestemming){
-        super(bestemming);
-        setNationaal(true);
-        setSpecificatie("IC");
+        this(bestemming, Reis.getMinimumPrijs(), true, "IC");
     }
 
     public boolean isNationaal() {
