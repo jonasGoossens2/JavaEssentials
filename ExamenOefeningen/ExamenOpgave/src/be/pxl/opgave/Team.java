@@ -4,8 +4,8 @@ package be.pxl.opgave;
 import java.util.ArrayList;
 
 public class Team{
-    private Sport sport;
-    private ArrayList<Speler> spelers;
+    private final Sport sport;
+    private final ArrayList<Speler> spelers;
 
     public Team(Sport sport){
         this.sport = sport;
@@ -18,21 +18,25 @@ public class Team{
 
     public void voegSpelerToe(Speler speler){
         //check if speler sport equals team sport and check if id is unique.
-        if(speler.getSport() == speler.getSport() && spelerIdKomtVoor(speler.getId())){
+        if(speler.getSport() != speler.getSport() && !spelerIdKomtVoor(speler.getId())){
             System.out.println("Foutieve ingave.");
             return;
         }
         //check if there is any space in array.
-        if(vindVrijePositie() >= 0){
-            spelers.set(vindVrijePositie(), speler);
+        int legeIndex = vindVrijePositie();
+        if(legeIndex != -1){
+            spelers.set(legeIndex, speler);
         }else{
             System.out.println("Geen plaats meer vrij in het team.");
         }
     }
 
-    private int vindVrijePositie()
-    {
-        return spelers.indexOf(null);
+    private int vindVrijePositie(){
+        if(spelers.size() < sport.getAantalSpelers()){
+            return spelers.size();
+        }else {
+            return -1;
+        }
     }
 
     public boolean spelerIdKomtVoor(String id){
